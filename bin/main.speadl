@@ -1,0 +1,13 @@
+import interfaces.ICamera
+
+namespace Main{   
+	
+//	component Environement{
+//		provides gui : IGUIEnvironement
+//		provides gameManager : IEnvManager
+//		provides robot : IRobotEnvironement
+//	}
+	component Robot {
+		requires eye : ICamera
+	}
+}
