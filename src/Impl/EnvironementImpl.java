@@ -1,7 +1,9 @@
 package Impl;
 
 import datatype.ColorObject;
+import datatype.ObjectEnvironment;
 import interfaces.ICamera;
+import interfaces.ICell;
 import Main.Cell;
 import Main.Environement;
 import Main.Grid;
@@ -31,13 +33,13 @@ public class EnvironementImpl extends Environement {
 	@Override
 	protected Cell make_cell() {
 		// TODO Auto-generated method stub
-		return null;
+		return new CellImpl();
 	}
 
 	@Override
 	protected Grid make_grid() {
 		// TODO Auto-generated method stub
-		return null;
+		return new GridImpl();
 	}
 
 }
