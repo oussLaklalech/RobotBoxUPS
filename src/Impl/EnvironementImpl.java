@@ -23,7 +23,7 @@ public class EnvironementImpl extends Environement {
 		return new ICamera() {
 			
 			@Override
-			public boolean hasBox() {
+			public boolean hasBox(Position pos) {
 				// TODO Auto-generated method stub
 				System.out.println("Icamera : has box");
 				
@@ -31,7 +31,7 @@ public class EnvironementImpl extends Environement {
 			}
 			
 			@Override
-			public ColorObject getBoxColor() {
+			public ColorObject getBoxColor(Position pos) {
 				System.out.println("Icamera : get color");
 				return null;
 			}

@@ -25,7 +25,7 @@ public class BrainImpl extends BrainRobot {
 	protected void start() {
 		System.out.println("brain");
 //        eco_provides().hand().deposerBox();
-		if ( eco_requires().eye().hasBox() || eco_requires().eye().getBoxColor() == color || box == null )
+		if ( eco_requires().eye().hasBox(eco_requires().position().getMyPosition()) || eco_requires().eye().getBoxColor(eco_requires().position().getMyPosition()) == color || box == null )
 			box = eco_provides().hand().takeBox();
 //		else if( box != null || eco_requires().eye().isAtNest())
 //			gotoNest();
