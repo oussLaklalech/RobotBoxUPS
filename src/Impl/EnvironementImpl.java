@@ -7,6 +7,7 @@ import datatype.ColorObject;
 import datatype.ObjectEnvironment;
 import datatype.Position;
 import interfaces.ICamera;
+import interfaces.IPosition;
 import Main.Environement;
 import Main.Robot;
 
@@ -34,12 +35,6 @@ public class EnvironementImpl extends Environement {
 				System.out.println("Icamera : get color");
 				return null;
 			}
-
-			@Override
-			public boolean isAtNest() {
-				// TODO Auto-generated method stub
-				return false;
-			}
 		};
 	}
 	
@@ -53,5 +48,11 @@ public class EnvironementImpl extends Environement {
 			positionsRobot.add(new Position(i+1, 0));
 		}
     }
+
+	@Override
+	protected IPosition make_positionEnv() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -3,6 +3,7 @@ import interfaces.IHand
 import interfaces.IFoot
 import datatype.ColorObject
 import datatype.Boximport datatype.Position
+import interfaces.IPosition
 
 namespace Main{   
 	
@@ -10,13 +11,14 @@ namespace Main{
 		provides eyeEnv : ICamera
 		requires handEnv : IHand
 		requires footEnv : IFoot
+		provides positionEnv : IPosition
 	}
 	
 	ecosystem Robot {
 		requires eye : ICamera
 		provides hand : IHand
 		provides foot : IFoot
-		
+		requires position : IPosition 
 		
 		species BrainRobot (color: ColorObject, box: Box){
 			
@@ -30,6 +32,7 @@ namespace Main{
 		}
 		part robot : Robot {
 			bind eye to environement.eyeEnv
+			bind position to environement.positionEnv
 		}
 	}
 }
