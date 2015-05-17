@@ -13,6 +13,7 @@ import Main.Robot;
 public class EnvironementImpl extends Environement {
 
 	private ArrayList<Position> positionsRobot;
+	private ArrayList<RobotImpl> listRobot;
 	
 	@Override
 	protected ICamera make_eyeEnv() {
@@ -24,6 +25,7 @@ public class EnvironementImpl extends Environement {
 			public boolean hasBox() {
 				// TODO Auto-generated method stub
 				System.out.println("Icamera : has box");
+				
 				return false;
 			}
 			
@@ -44,10 +46,12 @@ public class EnvironementImpl extends Environement {
 	@Override
 	protected void start() {
 		System.out.println("start Environnement");
-		Robot r1 = new RobotImpl(ColorObject.BLACK, null);
-		Robot r2 = new RobotImpl(ColorObject.BLUE, new Box());
-		positionsRobot.add(new Position(3, 5)); // position du robot r1
-		positionsRobot.add(new Position(22, 1)); // position du robot r2
+		// instantiation des robots avec leur positions
+		for(int i = 0 ; i< 10; i++){
+			listRobot.add(new RobotImpl(ColorObject.BLACK, null));
+			// TODO : génération de positions aléatoires 
+			positionsRobot.add(new Position(i+1, 0));
+		}
     }
 
 }
