@@ -1,13 +1,37 @@
 import interfaces.ICamera
+import interfaces.IHand
+import interfaces.IFoot
+import datatype.ColorObject
+import datatype.Box
+import interfaces.ICell
 
 namespace Main{   
 	
-//	component Environement{
-//		provides gui : IGUIEnvironement
-//		provides gameManager : IEnvManager
-//		provides robot : IRobotEnvironement
-//	}
-	component Robot {
+	ecosystem Environement{
+		provides eyeEnv : ICamera
+		requires handEnv : IHand
+		requires footEnv : IFoot
+	}
+	
+	ecosystem Robot {
 		requires eye : ICamera
+		provides hand : IHand
+		provides foot : IFoot
+		
+		
+		species BrainRobot (color: ColorObject, box: Box){
+			
+		}
+	}
+	
+	ecosystem MainSystem{
+		part environement : Environement{
+			bind handEnv to robot.hand
+			bind footEnv to robot.foot
+		}
+		part robot : Robot {
+			bind eye to environement.eyeEnv
+		}
+		
 	}
 }
