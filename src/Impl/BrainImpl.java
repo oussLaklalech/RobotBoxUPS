@@ -19,5 +19,4 @@ public class BrainImpl extends BrainRobot {
 		System.out.println("brain");
         eco_provides().hand().deposerBox();
     }
-
 }

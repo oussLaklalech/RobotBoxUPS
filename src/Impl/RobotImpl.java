@@ -8,7 +8,14 @@ import interfaces.IHand;
 
 public class RobotImpl extends Robot {
 
+	private ColorObject color;
+	private Box box;
 
+	public RobotImpl(ColorObject color, Box box){
+		System.out.println("Constructeur Robot");
+		this.color = color;
+		this.box = box;
+	}
 	@Override
 	protected BrainRobot make_BrainRobot(ColorObject color, Box box) {
 		return new BrainImpl(color, box);
@@ -69,9 +76,9 @@ public class RobotImpl extends Robot {
 		this.newBrainRobot(null, null);
     }
 	
-	
-	public static void main(String[] agrs){
-		BrainRobot.Component robot = (new RobotImpl()).newBrainRobot(null, null);
+	public void instanciateBrain(ColorObject color, Box box){
+		System.out.println("instanciateBrain");
+		this.newBrainRobot(color, box);
 	}
 	
 }

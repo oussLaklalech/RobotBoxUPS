@@ -11,13 +11,15 @@ public class MainImpl extends MainSystem{
 	@Override
 	protected Environement make_environement() {
 		// TODO Auto-generated method stub
+		System.out.println("make ENV");
 		return new EnvironementImpl();
 	}
 
 	@Override
 	protected Robot make_robot() {
 		// TODO Auto-generated method stub
-		return new RobotImpl();
+		System.out.println("make ROBOT");
+		return new RobotImpl(null, null);
 	}
 	
 	public static void main(String[] args){
