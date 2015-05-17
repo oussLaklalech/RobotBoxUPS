@@ -13,10 +13,23 @@ public class BrainImpl extends BrainRobot {
 		this.color = color;
 		this.box = box;
 	}
+private void gotoNest(){
+		
+	}
+	
+	private void searchBox(){
+		
+	}
 	
 	@Override
 	protected void start() {
 		System.out.println("brain");
-        eco_provides().hand().deposerBox();
+//        eco_provides().hand().deposerBox();
+		if ( eco_requires().eye().hasBox() || eco_requires().eye().getBoxColor() == color || box == null )
+			box = eco_provides().hand().takeBox();
+		else if( box != null || eco_requires().eye().isAtNest())
+			gotoNest();
+		else 
+			searchBox();
     }
 }

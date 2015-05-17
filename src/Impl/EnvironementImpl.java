@@ -19,6 +19,7 @@ public class EnvironementImpl extends Environement {
 		// TODO Auto-generated method stub
 		System.out.println("make EyeEnv");
 		return new ICamera() {
+			
 			@Override
 			public boolean hasBox() {
 				// TODO Auto-generated method stub
@@ -30,6 +31,12 @@ public class EnvironementImpl extends Environement {
 			public ColorObject getBoxColor() {
 				System.out.println("Icamera : get color");
 				return null;
+			}
+
+			@Override
+			public boolean isAtNest() {
+				// TODO Auto-generated method stub
+				return false;
 			}
 		};
 	}

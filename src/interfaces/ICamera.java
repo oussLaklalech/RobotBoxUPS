@@ -3,7 +3,8 @@ package interfaces;
 import datatype.ColorObject;
 
 public interface ICamera {
-	boolean hasBox();
+	public boolean hasBox();
 	//boolean hasSameColorBox();
-	ColorObject getBoxColor();
+	public ColorObject getBoxColor();
+	public boolean isAtNest();
 }
