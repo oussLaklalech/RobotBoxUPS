@@ -6,5 +6,4 @@ public interface ICamera {
 	public boolean hasBox();
 	//boolean hasSameColorBox();
 	public ColorObject getBoxColor();
-	public boolean isAtNest();
 }
