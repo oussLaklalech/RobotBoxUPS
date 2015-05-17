@@ -1,14 +1,19 @@
 package Impl;
 
+import java.util.ArrayList;
+
 import datatype.Box;
 import datatype.ColorObject;
 import datatype.ObjectEnvironment;
+import datatype.Position;
 import interfaces.ICamera;
 import Main.Environement;
 import Main.Robot;
 
 public class EnvironementImpl extends Environement {
 
+	private ArrayList<Position> positionsRobot;
+	
 	@Override
 	protected ICamera make_eyeEnv() {
 		// TODO Auto-generated method stub
@@ -32,12 +37,10 @@ public class EnvironementImpl extends Environement {
 	@Override
 	protected void start() {
 		System.out.println("start Environnement");
-		Robot r1 = new RobotImpl(ColorObject.BLACK, new Box());
-		
+		Robot r1 = new RobotImpl(ColorObject.BLACK, null);
 		Robot r2 = new RobotImpl(ColorObject.BLUE, new Box());
-		
-		//r1.make_BrainRobot(ColorObject.BLUE, new Box());
-		
+		positionsRobot.add(new Position(3, 5)); // position du robot r1
+		positionsRobot.add(new Position(22, 1)); // position du robot r2
     }
 
 }

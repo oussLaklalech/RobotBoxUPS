@@ -2,8 +2,7 @@ import interfaces.ICamera
 import interfaces.IHand
 import interfaces.IFoot
 import datatype.ColorObject
-import datatype.Box
-import interfaces.ICell
+import datatype.Boximport datatype.Position
 
 namespace Main{   
 	
@@ -32,6 +31,5 @@ namespace Main{
 		part robot : Robot {
 			bind eye to environement.eyeEnv
 		}
-		
 	}
 }

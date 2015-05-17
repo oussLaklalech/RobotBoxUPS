@@ -16,6 +16,7 @@ public class RobotImpl extends Robot {
 		this.color = color;
 		this.box = box;
 	}
+	
 	@Override
 	protected BrainRobot make_BrainRobot(ColorObject color, Box box) {
 		return new BrainImpl(color, box);
@@ -75,10 +76,5 @@ public class RobotImpl extends Robot {
 		System.out.println("robot");
 		this.newBrainRobot(null, null);
     }
-	
-	public void instanciateBrain(ColorObject color, Box box){
-		System.out.println("instanciateBrain");
-		this.newBrainRobot(color, box);
-	}
 	
 }
