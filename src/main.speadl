@@ -11,26 +11,6 @@ namespace Main{
 		provides eyeEnv : ICamera
 		requires handEnv : IHand
 		requires footEnv : IFoot
-		
-		part cell : Cell
-		
-		part grid : Grid{
-			bind handGrid to handEnv
-			bind footGrid to footEnv
-			bind cellGrid to cell.cell
-		}
-		
-	}
-
-	component Grid{
-		provides eyeGrid : ICamera
-		requires handGrid : IHand
-		requires footGrid : IFoot
-		requires cellGrid : ICell
-	}
-	
-	component Cell{
-		provides cell : ICell
 	}
 	
 	ecosystem Robot {

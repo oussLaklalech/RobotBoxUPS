@@ -4,9 +4,7 @@ import datatype.ColorObject;
 import datatype.ObjectEnvironment;
 import interfaces.ICamera;
 import interfaces.ICell;
-import Main.Cell;
 import Main.Environement;
-import Main.Grid;
 
 public class EnvironementImpl extends Environement {
 
@@ -28,18 +26,6 @@ public class EnvironementImpl extends Environement {
 				return null;
 			}
 		};
-	}
-
-	@Override
-	protected Cell make_cell() {
-		// TODO Auto-generated method stub
-		return new CellImpl();
-	}
-
-	@Override
-	protected Grid make_grid() {
-		// TODO Auto-generated method stub
-		return new GridImpl();
 	}
 
 }
