@@ -27,14 +27,14 @@ public class RobotImpl extends Robot {
 		return new IHand() {
 			
 			@Override
-			public void takeBox(Box box) {
+			public Box takeBox() {
 				System.out.println("take box");
+				return null;
 			}
 			
 			@Override
-			public void deposerBox() {
+			public void deposerBox( Box box ) {
 				System.out.println("depose box");
-				
 			}
 		};
 	}

@@ -3,8 +3,7 @@ package interfaces;
 import datatype.Box;
 
 public interface IHand {
-	public void takeBox(Box box);
+	public Box takeBox();
 	
-	//on verra l'argument
-	public void deposerBox();
+	public void deposerBox(Box box);
 }
